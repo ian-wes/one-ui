@@ -4,8 +4,7 @@
     "src"
   ],
   "compilerOptions": {
-    "composite": true,
-    "jsx": "react-jsx"
+    "composite": true
   },
   "references": []
 }

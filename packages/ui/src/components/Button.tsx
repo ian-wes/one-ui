@@ -1,22 +1,17 @@
-import { Button as BaseButton, ButtonProps, Spinner, TamaguiComponent } from 'tamagui'
-import { forwardRef } from 'react'
+import {Button as BaseButton, ButtonProps as BaseButtonProps, Spinner} from 'tamagui'
 
-export type LmButtonProps = ButtonProps & {
+export type ButtonProps = BaseButtonProps & {
     loading?: boolean
 }
 
-export const Button = forwardRef(function LmButtonFunc(
-    { loading, ...props }: LmButtonProps,
-    ref
-) {
+export const Button = (props: ButtonProps) => {
     return (
         <BaseButton
             {...props}
-            ref={ref as TamaguiComponent}
-            {...(loading && {
+            {...(props.loading && {
                 icon: <Spinner />,
                 disabled: true,
             })}
         />
     )
-})
+}
