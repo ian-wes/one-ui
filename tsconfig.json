@@ -5,6 +5,5 @@
     "paths": {
       "@one-ui/react/*": ["./packages/ui/*"]
     }
-  },
-  "extends": "expo/tsconfig.base"
+  }
 }

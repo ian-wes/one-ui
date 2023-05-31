@@ -1,7 +1,6 @@
 {
   "name": "ahpoi-one-universe-react",
-  "version": "0.3.3",
-  "private": false,
+  "version": "0.5.0",
   "source": "src/index.ts",
   "types": "./types/index.d.ts",
   "main": "dist/cjs",
@@ -25,18 +24,19 @@
   },
   "scripts": {
     "build": "tamagui-build",
-    "watch": "tamagui-build --watch"
+    "watch": "tamagui-build --watch",
+    "publish": "npm publish --access public"
   },
   "dependencies": {
-    "@tamagui/animations-react-native": "latest",
-    "@tamagui/react-native-media-driver": "latest",
-    "@tamagui/shorthands": "latest",
-    "@tamagui/themes": "latest",
-    "@tamagui/toast": "latest",
-    "tamagui": "latest"
+    "@tamagui/animations-react-native": "1.30.6",
+    "@tamagui/react-native-media-driver": "1.30.6",
+    "@tamagui/shorthands": "1.30.6",
+    "@tamagui/themes": "1.30.6",
+    "@tamagui/toast": "1.30.6",
+    "tamagui": "1.30.6"
   },
   "devDependencies": {
-    "@tamagui/build": "latest"
+    "@tamagui/build": "1.30.6"
   },
   "publishConfig": {
     "access": "public"

@@ -10,7 +10,7 @@ import config from './tamagui.config'
 export const Root = () => {
     return (
         <TamaguiProvider config={config} >
-            <Button  >Hello world</Button>
+            <Button loading={true}>Hello world</Button>
         </TamaguiProvider>
     )
 }
