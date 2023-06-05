@@ -1,16 +1,19 @@
 import '@tamagui/core/reset.css'
 import '@tamagui/polyfill-dev'
-import {Button} from 'ahpoi-one-universe-react'
 import * as React from 'react'
 
 import {TamaguiProvider} from 'tamagui'
-
-import config from './tamagui.config'
+import {Button, config} from 'ahpoi-one-universe-react'
 
 export const Root = () => {
     return (
-        <TamaguiProvider config={config} >
-            <Button loading={true}>Hello world</Button>
+        <TamaguiProvider config={config}>
+            <Button marginTop={'50px'} asChild>
+               <a href={"https://google.com"}>Google</a>
+            </Button>
+            <Button marginTop={'50px'} >
+                Click me
+            </Button>
         </TamaguiProvider>
     )
 }

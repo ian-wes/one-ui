@@ -25,7 +25,8 @@
   "scripts": {
     "build": "tamagui-build",
     "watch": "tamagui-build --watch",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access public",
+    "pack:ui": "yarn pack --out ../../starters/web/one-ui.tgz"
   },
   "dependencies": {
     "@tamagui/animations-react-native": "1.30.6",
@@ -33,10 +34,17 @@
     "@tamagui/shorthands": "1.30.6",
     "@tamagui/themes": "1.30.6",
     "@tamagui/toast": "1.30.6",
-    "tamagui": "1.30.6"
+    "tamagui": "1.30.6",
+    "typescript": "^4.7.4"
   },
   "devDependencies": {
-    "@tamagui/build": "1.30.6"
+    "@tamagui/build": "1.30.6",
+    "@types/react-native": "0.71.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "^0.71.8",
+    "react-native-svg": "13.4.0",
+    "react-native-web": "0.18.12"
   },
   "publishConfig": {
     "access": "public"

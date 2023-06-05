@@ -7,7 +7,7 @@
     "serve": "npx pushstate-server -p9999 -d./dist"
   },
   "dependencies": {
-    "ahpoi-one-universe-react": "^0.5.0",
+    "ahpoi-one-universe-react": "./one-ui-0.1.tgz",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-native-web": "^0.18.10"

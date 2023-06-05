@@ -1,9 +1,8 @@
 import { createFont, createTamagui } from '@tamagui/core'
 import { shorthands } from '@tamagui/shorthands'
 
-import { themes } from './themes'
-import { tokens } from './tokens'
 import {animations} from "./animations";
+import {tokens} from "./tokens/tokens";
 
 const fonts = {
   body: createFont({
@@ -76,7 +75,12 @@ export const config = createTamagui({
   themeClassNameOnRoot: true,
   shorthands,
   fonts,
-  themes,
+  themes: {
+    light: {
+      background: '#fff',
+      color: '#000',
+    },
+  },
   tokens,
   media: {
     xs: { maxWidth: 660 },
