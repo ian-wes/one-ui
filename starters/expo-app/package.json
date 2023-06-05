@@ -1,0 +1,28 @@
+{
+  "name": "expo-app",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "TAMAGUI_TARGET=native expo start --android",
+    "ios": "TAMAGUI_TARGET=native expo start -c --ios"
+  },
+  "dependencies": {
+    "@tamagui/babel-plugin": "^1.30.6",
+    "ahpoi-one-universe-react": "./one-ui.tgz",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.4",
+    "expo": "~48.0.15",
+    "expo-status-bar": "~1.4.4",
+    "react": "18.2.0",
+    "react-dom": "^18.2.0",
+    "react-native": "0.71.8",
+    "react-native-web": "^0.18.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react": "~18.0.14",
+    "typescript": "^4.7.4"
+  },
+  "private": true,
+  "packageManager": "yarn@3.5.0"
+}

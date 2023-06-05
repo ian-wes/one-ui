@@ -2860,7 +2860,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/animations-react-native@npm:1.30.6, @tamagui/animations-react-native@npm:^1.30.6":
+"@tamagui/animations-react-native@npm:1.30.6":
   version: 1.30.6
   resolution: "@tamagui/animations-react-native@npm:1.30.6"
   dependencies:
@@ -3452,7 +3452,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/react-native-media-driver@npm:1.30.6, @tamagui/react-native-media-driver@npm:^1.30.6":
+"@tamagui/react-native-media-driver@npm:1.30.6":
   version: 1.30.6
   resolution: "@tamagui/react-native-media-driver@npm:1.30.6"
   dependencies:
@@ -3598,7 +3598,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/shorthands@npm:1.30.6, @tamagui/shorthands@npm:^1.30.6":
+"@tamagui/shorthands@npm:1.30.6":
   version: 1.30.6
   resolution: "@tamagui/shorthands@npm:1.30.6"
   checksum: 7bab8e48b0bb713ff0f7b800ff51013f67a78e8a4e266aacc9214fcf2c9da176a135af2926ef30a73b8bad843ab96c92ea96396a182cffc13b195a49269652a1
@@ -3742,7 +3742,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/themes@npm:^1.30.6":
+"@tamagui/themes@npm:1.30.6":
   version: 1.30.6
   resolution: "@tamagui/themes@npm:1.30.6"
   dependencies:
@@ -3753,7 +3753,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/toast@npm:^1.30.6":
+"@tamagui/toast@npm:1.30.6":
   version: 1.30.6
   resolution: "@tamagui/toast@npm:1.30.6"
   dependencies:
@@ -4182,17 +4182,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ahpoi-one-universe-react@npm:^0.5.0":
+"ahpoi-one-universe-react@file:./one-ui.tgz::locator=expo-app%40workspace%3A.":
   version: 0.5.0
-  resolution: "ahpoi-one-universe-react@npm:0.5.0"
+  resolution: "ahpoi-one-universe-react@file:./one-ui.tgz::locator=expo-app%40workspace%3A."
   dependencies:
-    "@tamagui/animations-react-native": ^1.30.6
-    "@tamagui/react-native-media-driver": ^1.30.6
-    "@tamagui/shorthands": ^1.30.6
-    "@tamagui/themes": ^1.30.6
-    "@tamagui/toast": ^1.30.6
-    tamagui: ^1.30.6
-  checksum: 8079f9d37ca80c6c224a6c50ea878080420dcd6e9a01ab8ee11348e92ab8d7fd013f6808fc24983f484263347bdf652d4f38bd465887fc1c031b6d03333bb410
+    "@tamagui/animations-react-native": 1.30.6
+    "@tamagui/react-native-media-driver": 1.30.6
+    "@tamagui/shorthands": 1.30.6
+    "@tamagui/themes": 1.30.6
+    "@tamagui/toast": 1.30.6
+    tamagui: 1.30.6
+    typescript: ^4.7.4
+  checksum: 80f6d35df8299d57ff7e313eda3077279ad37b0932310b0e593f7cb27bf1797e1535bb4ed9b9dd848a5112746f94af597b29f8dad90033f188f42abf2bfa7241
   languageName: node
   linkType: hard
 
@@ -5964,7 +5965,7 @@ __metadata:
     "@babel/core": ^7.20.0
     "@tamagui/babel-plugin": ^1.30.6
     "@types/react": ~18.0.14
-    ahpoi-one-universe-react: ^0.5.0
+    ahpoi-one-universe-react: ./one-ui.tgz
     babel-plugin-transform-inline-environment-variables: ^0.4.4
     expo: ~48.0.15
     expo-status-bar: ~1.4.4
@@ -10671,7 +10672,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tamagui@npm:^1.30.6":
+"tamagui@npm:1.30.6":
   version: 1.30.6
   resolution: "tamagui@npm:1.30.6"
   dependencies:

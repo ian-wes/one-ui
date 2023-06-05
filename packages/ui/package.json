@@ -26,7 +26,8 @@
     "build": "tamagui-build",
     "watch": "tamagui-build --watch",
     "publish": "npm publish --access public",
-    "pack:ui": "yarn pack --out ../../starters/web/one-ui.tgz"
+    "pack:web": "yarn pack --out ../../starters/web/one-ui.tgz",
+    "pack:expo": "yarn pack --out ../../starters/expo-app/one-ui.tgz"
   },
   "dependencies": {
     "@tamagui/animations-react-native": "1.30.6",
