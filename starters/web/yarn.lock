@@ -2220,9 +2220,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ahpoi-one-universe-react@file:./one-ui-0.1.tgz::locator=web-starter%40workspace%3A.":
+"ahpoi-one-universe-react@file:./one-ui-0.3.tgz::locator=web-starter%40workspace%3A.":
   version: 0.5.0
-  resolution: "ahpoi-one-universe-react@file:./one-ui-0.1.tgz::locator=web-starter%40workspace%3A."
+  resolution: "ahpoi-one-universe-react@file:./one-ui-0.3.tgz::locator=web-starter%40workspace%3A."
   dependencies:
     "@tamagui/animations-react-native": 1.30.6
     "@tamagui/react-native-media-driver": 1.30.6
@@ -2231,7 +2231,7 @@ __metadata:
     "@tamagui/toast": 1.30.6
     tamagui: 1.30.6
     typescript: ^4.7.4
-  checksum: 48a5b3cc9f1d91556223867342d6b3af570b4b2e961088b62c3ab04155af03521715fcf47c0a75c312ad6ae6703f864f2edcd90176213828903864e4045738bf
+  checksum: d60c681696c63b5a3d63f37173ecb4ff03843de1cf084a36299647cdb00856acf6569f8ff01d22df1edd3de4c56ea460f5142b276164112f123f30c6ccf58765
   languageName: node
   linkType: hard
 
@@ -4598,7 +4598,7 @@ __metadata:
   dependencies:
     "@tamagui/vite-plugin": latest
     "@vitejs/plugin-react-swc": ^3.3.0
-    ahpoi-one-universe-react: ./one-ui-0.1.tgz
+    ahpoi-one-universe-react: ./one-ui-0.3.tgz
     react: ^18.2.0
     react-dom: ^18.2.0
     react-native-web: ^0.18.10

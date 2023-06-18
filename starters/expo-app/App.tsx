@@ -1,5 +1,4 @@
-import {StatusBar} from 'expo-status-bar';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Button, config} from 'ahpoi-one-universe-react'
 import {TamaguiProvider} from 'tamagui'
 
@@ -7,9 +6,11 @@ import * as React from "react";
 
 export default function App() {
     return (
-        <TamaguiProvider config={config as any}>
+        <TamaguiProvider config={config}>
             <View style={styles.container}>
-                <Button>Hello world</Button>
+                <Button disabled $md={{
+                    marginTop: '20px'
+                }}>Hello world</Button>
             </View>
         </TamaguiProvider>
     );

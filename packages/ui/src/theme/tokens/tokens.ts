@@ -1,89 +1,146 @@
 import {createTokens} from "tamagui";
-import {color} from "./color";
 
-const size = {
-  0: 0,
-  0.25: 2,
-  0.5: 4,
-  0.75: 8,
-  1: 20,
-  1.5: 24,
-  2: 28,
-  2.5: 32,
-  3: 36,
-  3.5: 40,
-  4: 44,
-  true: 44,
-  4.5: 48,
-  5: 52,
-  5.5: 59,
-  6: 64,
-  6.5: 69,
-  7: 74,
-  7.6: 79,
-  8: 84,
-  8.5: 89,
-  9: 94,
-  9.5: 99,
-  10: 104,
-  11: 124,
-  12: 144,
-  13: 164,
-  14: 184,
-  15: 204,
-  16: 224,
-  17: 224,
-  18: 244,
-  19: 264,
-  20: 284,
+/**
+ * Raw color from figma
+ */
+const palette = {
+    black: '#000',
+    white: '#fff',
+    royal: '#3a006a',
+    //That's what it's called in figma
+    'royal-inactive': '#CDBFD8',
+    aubergine: '#4F0084',
+    purple: '#9900F1',
+    violet: '#7400AF',
+    //Renamed to actual color as in figma it's called status-tooltip
+    'russian-violet': '#270146',
+    orchid: '#BA66FF',
+    mauve: '#DEA9FF',
+    wisteria: '#F4E7FF',
+    prince: '#B099C3',
+
+    parakeet: '#00E28F',
+    'parakeet-pressed': '#00cb81',
+    'parakeet-disabled': '#66eebc',
+    'parakeet-loading': '#33e8a5',
+
+    grass: '#00BA7E',
+
+    bubblegum: '#B0F4DE',
+    mint: '#c3f7e6',
+    turquoise: '#99E3CB',
+
+    slate: '#666666',
+    forest: '#017e6f',
+    'status-warning': '#E99D08',
+    'status-error': '#CB1F18',
+
+    'shades-cool-grey': '#9aa0a6',
+    'shades-pumice': '#d7d8e0',
+    'shades-ash': '#ebebeb',
+    'shades-light': '#f7f7f7',
+    'shades-white': '#fff',
+};
+
+//Tamgui (Component Library themable) => react native web
+const color = {
+    text: palette.royal,
+    'text.dark': palette.black,
+    'text.subtle': palette.slate,
+    'text.disabled': palette['royal-inactive'],
+    'text.light': palette.white,
+
+    brand: palette.aubergine,
+    'brand-subtlest': palette.orchid,
+    'brand.subtler': palette.purple,
+    'brand.subtle': palette.violet,
+    'brand.bold': palette.royal,
+    'brand.bolder': palette['russian-violet'],
+
+    'accent.mauve.subtle': palette.wisteria,
+    'accent.mauve': palette.mauve,
+
+    'accent.lavender': palette['royal-inactive'],
+    'accent.lavender.bold': palette.prince,
+
+    'accent.green.subtlest': palette['parakeet-disabled'],
+    'accent.green.subtle': palette['parakeet-loading'],
+    'accent.green': palette.parakeet,
+    'accent.green.bold': palette['parakeet-pressed'],
+    'accent.green.bolder': palette.grass,
+
+    'accent.grey.subtle': palette['shades-light'],
+    'accent.grey': palette['shades-ash'],
+    'accent.grey.bold': palette['shades-pumice'],
+    'accent.grey.bolder': palette['shades-cool-grey'],
+    'accent.grey.boldest': '#666',
+
+    'feedback.success': palette.forest,
+    'feedback.info': palette.wisteria,
+    'feedback.warning': palette['status-warning'],
+    'feedback.error': palette['status-error'],
+    'feedback.positive': palette.mint,
+    'feedback.negative': palette['shades-pumice'],
+    'feedback.neutral': palette['shades-light'],
 }
 
-const spaces = Object.entries(size).map(
-  ([k, v]) =>
-    [k, Math.max(0, v <= 16 ? Math.round(v * 0.333) : Math.floor(v * 0.7 - 12))] as const
-)
-
-const spacesNegative = spaces.slice(1).map(([k, v]) => [`-${k}`, -v])
+const size = {
+    none: '0',
+    '0.5x': '4px',
+    '1x': '8px',
+    true: '8px',
+    '1.5x': '12px',
+    '2x': '16px',
+    '2.5x': '20px',
+    '3x': '24px',
+    '4x': '32px',
+    '5x': '40px',
+    '6x': '48px',
+    '7x': '56px',
+    '8x': '64px',
+}
 
 const space = {
-  ...Object.fromEntries(spaces),
-  ...Object.fromEntries(spacesNegative),
-} as any
+    none: '0',
+    '0.5x': '4px',
+    '1x': '8px',
+    true: '8px',
+    '1.5x': '12px',
+    '2x': '16px',
+    '2.5x': '20px',
+    '3x': '24px',
+    '4x': '32px',
+    '5x': '40px',
+    '6x': '48px',
+    '7x': '56px',
+    '8x': '64px',
+}
 
 const zIndex = {
-  0: 0,
-  1: 100,
-  2: 200,
-  3: 300,
-  4: 400,
-  5: 500,
+    0: 0,
+    1: 100,
+    2: 200,
+    3: 300,
+    4: 400,
+    5: 500,
 }
 
 const radius = {
-  0: 0,
-  1: 3,
-  2: 5,
-  3: 7,
-  4: 9,
-  true: 9,
-  5: 10,
-  6: 16,
-  7: 19,
-  8: 22,
-  9: 26,
-  10: 34,
-  11: 42,
-  12: 50,
-  50: 50,
-  55: 50
+    none: '0',
+    '1x': '4px',
+    true: '4px',
+    '2x': '8px',
+    '3x': '12px',
+    '4x': '16px',
+    round: '9999px',
 }
 
 export const tokens = createTokens({
-  color,
-  space,
-  size,
-  radius,
-  zIndex,
+    color,
+    space,
+    size,
+    radius,
+    zIndex,
 })
 
 

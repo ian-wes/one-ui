@@ -4182,9 +4182,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ahpoi-one-universe-react@file:./one-ui.tgz::locator=expo-app%40workspace%3A.":
+"ahpoi-one-universe-react@file:./one-ui-0.3.tgz::locator=expo-app%40workspace%3A.":
   version: 0.5.0
-  resolution: "ahpoi-one-universe-react@file:./one-ui.tgz::locator=expo-app%40workspace%3A."
+  resolution: "ahpoi-one-universe-react@file:./one-ui-0.3.tgz::locator=expo-app%40workspace%3A."
   dependencies:
     "@tamagui/animations-react-native": 1.30.6
     "@tamagui/react-native-media-driver": 1.30.6
@@ -4193,7 +4193,7 @@ __metadata:
     "@tamagui/toast": 1.30.6
     tamagui: 1.30.6
     typescript: ^4.7.4
-  checksum: 80f6d35df8299d57ff7e313eda3077279ad37b0932310b0e593f7cb27bf1797e1535bb4ed9b9dd848a5112746f94af597b29f8dad90033f188f42abf2bfa7241
+  checksum: d60c681696c63b5a3d63f37173ecb4ff03843de1cf084a36299647cdb00856acf6569f8ff01d22df1edd3de4c56ea460f5142b276164112f123f30c6ccf58765
   languageName: node
   linkType: hard
 
@@ -5965,7 +5965,7 @@ __metadata:
     "@babel/core": ^7.20.0
     "@tamagui/babel-plugin": ^1.30.6
     "@types/react": ~18.0.14
-    ahpoi-one-universe-react: ./one-ui.tgz
+    ahpoi-one-universe-react: ./one-ui-0.3.tgz
     babel-plugin-transform-inline-environment-variables: ^0.4.4
     expo: ~48.0.15
     expo-status-bar: ~1.4.4

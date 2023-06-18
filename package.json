@@ -2,6 +2,7 @@
   "name": "one-ui",
   "private": true,
   "workspaces": [
+    "apps/*",
     "packages/*"
   ],
   "dependencies": {

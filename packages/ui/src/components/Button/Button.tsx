@@ -2,16 +2,19 @@ import * as React from 'react'
 import {Button as BaseButton, styled, ButtonProps as BaseButtonProps, TamaguiComponent, Spinner} from "tamagui";
 
 type ButtonProps = {
+    variant?: 'primary' | 'secondary'
+    size?: '$sm' | '$md' | '$lg';
     loading?: boolean
-} & BaseButtonProps
+} & Omit<BaseButtonProps,'size'>
 
 export const Button = React.forwardRef((
-    {loading, children, ...props}: ButtonProps,
+    {loading, size = '$sm', variant = 'primary', children, ...props}: ButtonProps,
     ref
 ) => {
     const Component = {
-        'primary': PrimaryButton
-    }['primary']
+        'primary': PrimaryButton,
+        'secondary': PrimaryButton
+    }[variant]
     return (
         <Component
             ref={ref as TamaguiComponent}
@@ -19,6 +22,7 @@ export const Button = React.forwardRef((
                 icon: <Spinner size={'small'}/>,
                 disabled: true,
             })}
+            size={size as never}
             {...props}
         >
             {children}
@@ -26,17 +30,34 @@ export const Button = React.forwardRef((
     );
 })
 
+const size = {
+    '$sm': {
+        height: 40,
+        paddingRight: 8,
+        paddingLeft: 8,
+    },
+    '$md': {
+        height: 56,
+        paddingRight: 16,
+        paddingLeft: 16,
+    },
+    '$lg': {
+        height: 72,
+        paddingRight: 24,
+        paddingLeft: 24,
+    },
+}
 
-const PrimaryButton = styled(BaseButton, {
+const PrimaryButton =  styled(BaseButton, {
     name: 'button',
-    borderRadius: '99px',
+    borderRadius: '50px',
     color: '$brand',
     backgroundColor: '$accent.green',
     borderColor: 'transparent',
+    fontWeight: '$bold',
     focusStyle: {
-        outlineColor: '$accent.green.subtle',
-        outlineStyle: 'solid',
-        outlineWidth: 1,
+        backgroundColor: '$accent.green.bold',
+        outlineStyle: 'none',
     },
     hoverStyle: {
         backgroundColor: '$accent.green.bold',
@@ -58,6 +79,7 @@ const PrimaryButton = styled(BaseButton, {
                 cursor: 'not-allowed',
                 backgroundColor: '$accent.green.subtle'
             }
-        }
-    } as const,
+        },
+        size: size,
+    } ,
 })

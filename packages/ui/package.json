@@ -1,6 +1,6 @@
 {
-  "name": "ahpoi-one-universe-react",
-  "version": "0.5.0",
+  "name": "@one-ui/react",
+  "version": "0.0.0",
   "source": "src/index.ts",
   "types": "./types/index.d.ts",
   "main": "dist/cjs",
@@ -26,8 +26,8 @@
     "build": "tamagui-build",
     "watch": "tamagui-build --watch",
     "publish": "npm publish --access public",
-    "pack:web": "yarn pack --out ../../starters/web/one-ui.tgz",
-    "pack:expo": "yarn pack --out ../../starters/expo-app/one-ui.tgz"
+    "pack:web": "yarn pack --out ../../starters/web/one-ui-0.3.tgz",
+    "pack:expo": "yarn pack --out ../../starters/expo-app/one-ui-0.3.tgz"
   },
   "dependencies": {
     "@tamagui/animations-react-native": "1.30.6",

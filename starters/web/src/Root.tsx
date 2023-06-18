@@ -8,10 +8,7 @@ import {Button, config} from 'ahpoi-one-universe-react'
 export const Root = () => {
     return (
         <TamaguiProvider config={config}>
-            <Button marginTop={'50px'} asChild>
-               <a href={"https://google.com"}>Google</a>
-            </Button>
-            <Button marginTop={'50px'} >
+            <Button marginTop={'50px'} color={'$accent.green.bolder'}  marginLeft={'$5'}>
                 Click me
             </Button>
         </TamaguiProvider>
