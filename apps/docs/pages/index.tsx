@@ -12,7 +12,6 @@ export default function Page() {
                 <Button size={'$md'}>Medium</Button>
                 <Button size={'$lg'}>Large</Button>
             </div>
-
             <Text size={'$xl'}>Test</Text>
         </>
     )

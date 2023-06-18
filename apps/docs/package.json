@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build": "next build",
     "dev": "next dev",
     "start": "next start",
     "serve": "NODE_ENV=production next start --port 8151",
@@ -10,7 +11,6 @@
   },
   "dependencies": {
     "@one-ui/react": "0.0.0",
-    "@tamagui/next-theme": "latest",
     "next": "^13.2.4",
     "raf": "^3.4.1",
     "react": "^18.2.0",
