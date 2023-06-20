@@ -1,22 +1,23 @@
 import * as React from 'react'
-import {Button as BaseButton, styled, ButtonProps as BaseButtonProps, TamaguiComponent, Spinner} from "tamagui";
+import {Button as BaseButton, styled, ButtonProps as BaseButtonProps, TamaguiComponent, Spinner, Stack} from "tamagui";
 
 type ButtonProps = {
     variant?: 'primary' | 'secondary'
     size?: '$sm' | '$md' | '$lg';
-    prefix?: React.ReactNode;
-    suffix?: React.ReactNode;
+    prefix?: ButtonProps['icon'];
+    suffix?: ButtonProps['icon'];
     loading?: boolean
 } & Omit<BaseButtonProps,'size'>
 
 export const Button = React.forwardRef((
-    {loading, size = '$sm', variant = 'primary', children, ...props}: ButtonProps,
+    {loading, size = '$sm', variant = 'primary', children, prefix, suffix, ...props}: ButtonProps,
     ref
 ) => {
     const Component = {
         'primary': PrimaryButton,
         'secondary': PrimaryButton
     }[variant]
+    const spinnerPosition = suffix ? 'suffix' : 'prefix';
     return (
         <Component
             ref={ref as TamaguiComponent}
@@ -24,6 +25,8 @@ export const Button = React.forwardRef((
                 icon: <Spinner size={'small'}/>,
                 disabled: true,
             })}
+            icon={prefix}
+            iconAfter={suffix}
             size={size as never}
             {...props}
         >
