@@ -1,6 +1,6 @@
 import '@tamagui/core/reset.css'
 import 'raf/polyfill'
-
+import '../fonts/montserrat.css';
 import Head from 'next/head'
 import React from 'react'
 import {UIProvider} from "@one-ui/react";

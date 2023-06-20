@@ -4,6 +4,8 @@ import {Button as BaseButton, styled, ButtonProps as BaseButtonProps, TamaguiCom
 type ButtonProps = {
     variant?: 'primary' | 'secondary'
     size?: '$sm' | '$md' | '$lg';
+    prefix?: React.ReactNode;
+    suffix?: React.ReactNode;
     loading?: boolean
 } & Omit<BaseButtonProps,'size'>
 
@@ -33,13 +35,17 @@ export const Button = React.forwardRef((
 const size = {
     '$sm': {
         height: 40,
-        paddingRight: 8,
-        paddingLeft: 8,
+        paddingTop: 8,
+        paddingBottom: 8,
+        paddingRight: 24,
+        paddingLeft: 24,
     },
     '$md': {
         height: 56,
-        paddingRight: 16,
-        paddingLeft: 16,
+        paddingTop: 16,
+        paddingBottom: 16,
+        paddingRight: 24,
+        paddingLeft: 24,
     },
     '$lg': {
         height: 72,
@@ -50,7 +56,7 @@ const size = {
 
 const PrimaryButton =  styled(BaseButton, {
     name: 'button',
-    borderRadius: '50px',
+    borderRadius: '999px',
     color: '$brand',
     backgroundColor: '$accent.green',
     borderColor: 'transparent',

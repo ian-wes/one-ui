@@ -35,12 +35,6 @@ module.exports = function () {
     typescript: {
       ignoreBuildErrors: true,
     },
-    modularizeImports: {
-      '@tamagui/lucide-icons': {
-        transform: `@tamagui/lucide-icons/dist/esm/icons/{{kebabCase member}}`,
-        skipDefaultConversion: true,
-      },
-    },
     transpilePackages: [
       'react-native-web',
       'expo-linking',

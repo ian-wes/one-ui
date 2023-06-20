@@ -1,6 +1,6 @@
 export const fonts = {
     body: ({
-        family: `Helvetica`,
+        family: 'Montserrat',
         size: {
             xs: 12,
             sm: 15,
@@ -14,10 +14,10 @@ export const fonts = {
         },
         letterSpacing: {},
         weight: {
-            normal: 400,
-            medium: 500,
-            semibold: 600,
-            bold: 700,
+            normal: '400',
+            medium: '500',
+            semibold: '600',
+            bold: '700',
         },
         lineHeight: {
             xs: 16,
@@ -29,10 +29,16 @@ export const fonts = {
             '3xl': 58,
             '4xl': 70,
             true: 20,
+        },
+        face: {
+            400: {normal: 'Montserrat'},
+            500: {normal: 'MontserratMedium'},
+            600: {normal: 'MontserratSemiBold'},
+            700: {normal: 'MontserratBold'},
         },
     }),
     heading: ({
-        family: `Helvetica`,
+        family: 'Montserrat',
         size: {
             xs: 12,
             sm: 15,
@@ -46,10 +52,10 @@ export const fonts = {
         },
         letterSpacing: {},
         weight: {
-            normal: 400,
-            medium: 500,
-            semibold: 600,
-            bold: 700,
+            normal: '400',
+            medium: '500',
+            semibold: '600',
+            bold: '700',
         },
         lineHeight: {
             xs: 16,
@@ -61,6 +67,12 @@ export const fonts = {
             '3xl': 58,
             '4xl': 70,
             true: 20,
+        },
+        face: {
+            400: {normal: 'Montserrat'},
+            500: {normal: 'MontserratMedium'},
+            600: {normal: 'MontserratSemiBold'},
+            700: {normal: 'MontserratBold'},
         },
     }),
 }
