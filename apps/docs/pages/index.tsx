@@ -7,7 +7,7 @@ export default function Page() {
         <svg
             width={24}
             height={24}
-            fill="currentColor"
+            fill="#4F0084"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             {...props}
@@ -23,6 +23,7 @@ export default function Page() {
             <div style={{display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center'}}>
                 <Button size={'$sm'} >Small</Button>
                 <Button size={'$md'} disabled suffix={<ArrowRight/>}>Medium</Button>
+                <Button size={'$md'} loading suffix={<ArrowRight/>}>Loading</Button>
                 <Button size={'$lg'}>Large</Button>
             </div>
             <Text size={'$xl'}>Test</Text>

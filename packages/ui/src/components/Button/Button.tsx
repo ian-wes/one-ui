@@ -10,7 +10,7 @@ type ButtonProps = {
 } & Omit<BaseButtonProps,'size'>
 
 export const Button = React.forwardRef((
-    {loading, size = '$sm', variant = 'primary', children, prefix, suffix, ...props}: ButtonProps,
+    {loading, size = '$md', variant = 'primary', disabled, children, prefix, suffix, ...props}: ButtonProps,
     ref
 ) => {
     const Component = {
@@ -21,13 +21,18 @@ export const Button = React.forwardRef((
     return (
         <Component
             ref={ref as TamaguiComponent}
-            {...(loading && {
-                icon: <Spinner size={'small'}/>,
-                disabled: true,
-            })}
             icon={prefix}
             iconAfter={suffix}
             size={size as never}
+            disabled={disabled}
+            {...(loading && spinnerPosition === 'prefix' && {
+                icon: <Spinner size={'small'}/>,
+                disabled: true,
+            })}
+            {...(loading && spinnerPosition === 'suffix' && {
+                iconAfter: <Spinner size={'small'}/>,
+                disabled: true,
+            })}
             {...props}
         >
             {children}
@@ -64,12 +69,12 @@ const PrimaryButton =  styled(BaseButton, {
     backgroundColor: '$accent.green',
     borderColor: 'transparent',
     fontWeight: '$bold',
+    hoverStyle: {
+        backgroundColor: '$accent.green.bold',
+    },
     focusStyle: {
         backgroundColor: '$accent.green.bold',
         outlineStyle: 'none',
-    },
-    hoverStyle: {
-        backgroundColor: '$accent.green.bold',
     },
     pressStyle: {
         backgroundColor: '$accent.green.bold',
@@ -78,15 +83,7 @@ const PrimaryButton =  styled(BaseButton, {
         disabled: {
             true: {
                 pointerEvents: 'none',
-                cursor: 'not-allowed',
-                backgroundColor: '$accent.green.subtlest'
-            }
-        },
-        loading: {
-            true: {
-                pointerEvents: 'none',
-                cursor: 'not-allowed',
-                backgroundColor: '$accent.green.subtle'
+                backgroundColor: '$accent.green.subtlest',
             }
         },
         size: size,

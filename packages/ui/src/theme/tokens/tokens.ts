@@ -82,6 +82,7 @@ const color = {
     'feedback.positive': palette.mint,
     'feedback.negative': palette['shades-pumice'],
     'feedback.neutral': palette['shades-light'],
+
 }
 
 const size = {
