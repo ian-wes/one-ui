@@ -1,4 +1,4 @@
-import { config } from 'ahpoi-one-universe-react'
+import { config } from '@one-ui/react'
 
 export type AppConfig = typeof config
 

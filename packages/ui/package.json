@@ -27,7 +27,7 @@
     "watch": "tamagui-build --watch",
     "publish": "Anpm publish --access public",
     "pack:web": "yarn pack --out ../../starters/web/one-ui-0.3.tgz",
-    "pack:expo": "yarn pack --out ../../starters/expo-app/one-ui-0.3.tgz"
+    "pack:expo": "yarn pack --out ../../starters/expo-app/one-ui-0.4.tgz"
   },
   "dependencies": {
     "@tamagui/animations-react-native": "1.35.8",

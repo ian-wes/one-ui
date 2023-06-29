@@ -8,8 +8,8 @@
     "ios": "TAMAGUI_TARGET=native expo start -c --ios"
   },
   "dependencies": {
+    "@one-ui/react": "./one-ui-0.4.tgz",
     "@tamagui/babel-plugin": "^1.35.8",
-    "ahpoi-one-universe-react": "./one-ui-0.3.tgz",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "expo": "~48.0.15",
     "expo-status-bar": "~1.4.4",
